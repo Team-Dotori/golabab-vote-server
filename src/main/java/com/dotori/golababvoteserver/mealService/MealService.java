@@ -1,6 +1,6 @@
 package com.dotori.golababvoteserver.mealService;
 
-import com.dotori.golababvoteserver.advie.MealNotFoundException;
+import com.dotori.golababvoteserver.exception.MealNotFoundException;
 import com.dotori.golababvoteserver.mealDto.RequestDto;
 import com.dotori.golababvoteserver.mealDto.RequestMealDto;
 import com.dotori.golababvoteserver.model.DailyVote;
@@ -29,9 +29,14 @@ public class MealService {
 
         return dayOfWeekNumber;
     }
-    public void save(RequestDto requestDto, Meal meal) {
+    public void saveAll(RequestDto requestDto, Meal breakfast, Meal lunch, Meal dinner) throws Exception {
+        save(requestDto, breakfast);
+        save(requestDto, lunch);
+        save(requestDto, dinner);
+    }
+    public RequestDto save(RequestDto requestDto, Meal meal) throws Exception {
         Date date = new Date();
-        RequestMealDto requestMeal;
+        RequestMealDto requestMeal = null;
         switch (meal) {
             case BREAKFAST:
                 requestMeal = requestDto.getBreakfast();
@@ -40,17 +45,16 @@ public class MealService {
                 requestMeal = requestDto.getLunch();
                 break;
             case DINNER:
+                if(getDateDay() != 5)
                 requestMeal = requestDto.getDinner();
                 break;
             default:
                 throw new MealNotFoundException();
         }
         save(requestMeal, meal, date);
-
-
+        return requestDto;
     }
-
-    private void save(RequestMealDto requestMeal, Meal meal, Date date) {
+    private RequestMealDto save(RequestMealDto requestMeal, Meal meal, Date date) {
 
         requestMeal.getMenu().forEach(
                 (k, v) -> {
@@ -58,6 +62,7 @@ public class MealService {
                     totalVoteRepository.save(toEntity(k,v));
                 }
         );
+        return requestMeal;
     }
 
     public DailyVote toEntity(Date date, Meal meal, String menu, int numOfVote){

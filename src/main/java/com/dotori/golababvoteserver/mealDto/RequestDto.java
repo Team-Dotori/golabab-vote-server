@@ -13,15 +13,5 @@ public class RequestDto {
     private final RequestMealDto lunch;
     private final RequestMealDto dinner;
 
-    public void mealSave(MealService mealService){
-        mealService.save(this, Meal.BREAKFAST);
-        mealService.save(this, Meal.LUNCH);
-    try{
-        if(mealService.getDateDay() != 5) { // 금요일이면
-            mealService.save(this, Meal.DINNER);
-        }
-    } catch(Exception e){}
-
-    }
 }
 

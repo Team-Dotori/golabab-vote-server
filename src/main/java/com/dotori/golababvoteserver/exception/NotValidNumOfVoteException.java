@@ -1,4 +1,4 @@
-package com.dotori.golababvoteserver.advie;
+package com.dotori.golababvoteserver.exception;
 
 public class NotValidNumOfVoteException extends RuntimeException{
 
