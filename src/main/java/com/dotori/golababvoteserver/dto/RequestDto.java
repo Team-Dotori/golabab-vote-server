@@ -1,8 +1,5 @@
-package com.dotori.golababvoteserver.mealDto;
+package com.dotori.golababvoteserver.dto;
 
-import com.dotori.golababvoteserver.mealService.MealService;
-import com.dotori.golababvoteserver.model.Meal;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 

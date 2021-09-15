@@ -1,6 +1,6 @@
 package com.dotori.golababvoteserver.controller;
 
-import com.dotori.golababvoteserver.mealDto.MessageDto;
+import com.dotori.golababvoteserver.dto.MessageDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
