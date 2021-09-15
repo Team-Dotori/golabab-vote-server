@@ -1,4 +1,4 @@
-package com.dotori.golababvoteserver.Service;
+package com.dotori.golababvoteserver.service;
 
 import com.dotori.golababvoteserver.exception.MealNotFoundException;
 import com.dotori.golababvoteserver.dto.RequestDto;

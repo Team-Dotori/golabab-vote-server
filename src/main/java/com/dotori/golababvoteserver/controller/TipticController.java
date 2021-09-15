@@ -1,6 +1,6 @@
 package com.dotori.golababvoteserver.controller;
 
-import com.dotori.golababvoteserver.Service.TipticService;
+import com.dotori.golababvoteserver.service.TipticService;
 import com.dotori.golababvoteserver.dto.MessageDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
