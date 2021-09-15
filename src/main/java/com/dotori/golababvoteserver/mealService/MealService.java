@@ -88,7 +88,8 @@ public class MealService {
         }
         return TotalVote.builder()
                 .menu(menu)
-                .NumOfValue(numOfVote)
+                .numOfValue(numOfVote)
+                .version("version")
                 .build();
         // throw new NotFoundMenuName
         }
