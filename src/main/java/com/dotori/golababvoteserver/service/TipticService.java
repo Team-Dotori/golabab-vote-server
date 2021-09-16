@@ -6,7 +6,7 @@ import com.dotori.golababvoteserver.repository.TipticRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 @RequiredArgsConstructor
 @Service
@@ -17,11 +17,15 @@ public class TipticService {
         if (messageDto != null ){
             throw new NullPointerException();
         }
-        LocalDate date = LocalDate.now();
+        Date date = new Date();
         tipticRepository.save(toEntity(messageDto,date));
     }
 
-    public ImproveMessage toEntity(MessageDto messageDto, LocalDate date){
+    public String GetMessage(){
+
+    }
+
+    public ImproveMessage toEntity(MessageDto messageDto, Date date){
         return ImproveMessage.builder()
                 .message(messageDto.getMessage())
                 .date(date)

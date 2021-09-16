@@ -26,10 +26,10 @@ public class ImproveMessage {
     private String message;
 
     @Column(name = "date")
-    private LocalDate date;
+    private Date date;
 
     @Builder
-    public ImproveMessage(String message, LocalDate date){
+    public ImproveMessage(String message, Date date){
         this.message = message;
         this.date = date;
     }
