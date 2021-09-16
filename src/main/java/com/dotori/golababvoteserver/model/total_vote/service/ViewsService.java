@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 public class ViewsService {
     private final TotalVoteRepository totalVoteRepository;
 
-    public String returnViews(ViewsDto viewsDto){
+    public List<RankingDto> returnViews(ViewsDto viewsDto){
         ObjectMapper mapper = new ObjectMapper();
         AtomicReference<String> json = new AtomicReference<>();
         /*
@@ -37,6 +37,6 @@ public class ViewsService {
                 e.printStackTrace();
             }
         });
-        return json.get();
+        return returnValue;
     }
 }
