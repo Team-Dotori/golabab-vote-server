@@ -1,7 +1,6 @@
-package com.dotori.golababvoteserver.controller;
+package com.dotori.golababvoteserver.model.improve_message.controller;
 
-import com.dotori.golababvoteserver.dto.MessageDto;
-import com.dotori.golababvoteserver.service.TipticService;
+import com.dotori.golababvoteserver.model.improve_message.service.TipticService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +11,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/v1/tiptic")
-public class TipticController {
+public class    TipticController {
     private final TipticService tipticService;
 
     @GetMapping("/add-improve-message")                              //추후 상세 Exception으로 변경

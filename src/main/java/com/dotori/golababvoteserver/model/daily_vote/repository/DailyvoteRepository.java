@@ -1,7 +1,6 @@
-package com.dotori.golababvoteserver.repository;
+package com.dotori.golababvoteserver.model.daily_vote.repository;
 
-import com.dotori.golababvoteserver.model.DailyVote;
-import com.dotori.golababvoteserver.model.TotalVote;
+import com.dotori.golababvoteserver.model.daily_vote.DailyVote;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface DailyvoteRepository extends JpaRepository<DailyVote, Long> {

@@ -1,4 +1,4 @@
-package com.dotori.golababvoteserver.model;
+package com.dotori.golababvoteserver.model.improve_message;
 
 import lombok.Builder;
 import lombok.Getter;

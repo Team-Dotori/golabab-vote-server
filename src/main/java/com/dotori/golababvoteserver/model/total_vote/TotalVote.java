@@ -1,4 +1,4 @@
-package com.dotori.golababvoteserver.model;
+package com.dotori.golababvoteserver.model.total_vote;
 
 import lombok.Builder;
 import lombok.Getter;

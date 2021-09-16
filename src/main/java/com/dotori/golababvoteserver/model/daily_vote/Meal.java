@@ -1,4 +1,4 @@
-package com.dotori.golababvoteserver.model;
+package com.dotori.golababvoteserver.model.daily_vote;
 
 public enum Meal{
     BREAKFAST,

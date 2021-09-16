@@ -1,7 +1,7 @@
-package com.dotori.golababvoteserver.service;
+package com.dotori.golababvoteserver.model.improve_message.service;
 
-import com.dotori.golababvoteserver.model.ImproveMessage;
-import com.dotori.golababvoteserver.repository.TipticRepository;
+import com.dotori.golababvoteserver.model.improve_message.ImproveMessage;
+import com.dotori.golababvoteserver.model.improve_message.repository.TipticRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

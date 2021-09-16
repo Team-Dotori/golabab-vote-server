@@ -1,7 +1,7 @@
-package com.dotori.golababvoteserver.controller;
+package com.dotori.golababvoteserver.model.total_vote.controller;
 
 
-import com.dotori.golababvoteserver.service.ViewsService;
+import com.dotori.golababvoteserver.model.total_vote.service.ViewsService;
 import com.dotori.golababvoteserver.dto.ViewsDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;

@@ -1,11 +1,9 @@
-package com.dotori.golababvoteserver.model;
+package com.dotori.golababvoteserver.model.daily_vote;
 
 import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 
 @Entity(name = "daily_vote") @Getter @Setter
