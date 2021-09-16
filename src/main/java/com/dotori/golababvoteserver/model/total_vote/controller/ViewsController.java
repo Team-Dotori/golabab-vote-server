@@ -1,6 +1,7 @@
 package com.dotori.golababvoteserver.model.total_vote.controller;
 
 
+import com.dotori.golababvoteserver.dto.ResponseRankingDto;
 import com.dotori.golababvoteserver.model.total_vote.dto.RankingDto;
 import com.dotori.golababvoteserver.model.total_vote.service.ViewsService;
 import com.dotori.golababvoteserver.dto.ViewsDto;
@@ -19,9 +20,9 @@ public class ViewsController {
 
     @ResponseBody
     @GetMapping("/menu-ranking")
-    public List<RankingDto> Ranking(@RequestParam int start, int end, String range ){
+    public ResponseRankingDto Ranking(@RequestParam int start, int end, String range ){
         ViewsDto viewsDto = new ViewsDto(start, end, range);
-        return viewsService.returnViews(viewsDto);
+        return new ResponseRankingDto(viewsService.returnViews(viewsDto));
     }
 
 }
