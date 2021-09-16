@@ -22,7 +22,7 @@ public class ImproveMessage {
     private Long idx;
 
     @NotBlank
-    @Size(min = 0, max = 32)
+    @Size(min = 0, max = 128)
     private String message;
 
     @Column(name = "date")
