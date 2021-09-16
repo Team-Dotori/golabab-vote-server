@@ -1,8 +1,8 @@
-package com.dotori.golababvoteserver.mealService;
+package com.dotori.golababvoteserver.service;
 
 import com.dotori.golababvoteserver.model.TotalVote;
 import com.dotori.golababvoteserver.repository.TotalVoteRepository;
-import com.dotori.golababvoteserver.viewsDto.ViewsDto;
+import com.dotori.golababvoteserver.dto.ViewsDto;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;

@@ -1,7 +1,7 @@
 package com.dotori.golababvoteserver.controller;
 
-import com.dotori.golababvoteserver.mealDto.RequestDto;
-import com.dotori.golababvoteserver.mealService.MealService;
+import com.dotori.golababvoteserver.dto.RequestDto;
+import com.dotori.golababvoteserver.service.MealService;
 import com.dotori.golababvoteserver.model.Meal;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;

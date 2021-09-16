@@ -1,4 +1,4 @@
-package com.dotori.golababvoteserver.viewsDto;
+package com.dotori.golababvoteserver.dto;
 
 import lombok.Getter;
 import java.util.HashMap;

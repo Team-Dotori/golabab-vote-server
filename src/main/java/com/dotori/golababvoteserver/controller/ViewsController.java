@@ -1,14 +1,11 @@
 package com.dotori.golababvoteserver.controller;
 
 
-import com.dotori.golababvoteserver.mealService.ViewsService;
-import com.dotori.golababvoteserver.viewsDto.ViewsDto;
+import com.dotori.golababvoteserver.service.ViewsService;
+import com.dotori.golababvoteserver.dto.ViewsDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicReference;
 
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/views")
