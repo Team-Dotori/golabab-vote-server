@@ -1,6 +1,5 @@
 package com.dotori.golababvoteserver.service;
 
-import com.dotori.golababvoteserver.dto.MessageDto;
 import com.dotori.golababvoteserver.model.ImproveMessage;
 import com.dotori.golababvoteserver.repository.TipticRepository;
 import lombok.RequiredArgsConstructor;
@@ -14,19 +13,17 @@ import java.util.stream.Collectors;
 public class TipticService {
     private final TipticRepository tipticRepository;
 
-    public void MessageSave(MessageDto messageDto){
-        if (messageDto != null ){
-            throw new NullPointerException();
-        }
+    public void MessageSave(String message){
         Date date = new Date();
-        tipticRepository.save(toEntity(messageDto,date));
+        tipticRepository.save(new ImproveMessage(message,date));
     }
 
     public List<String> GetMessage(){
         Date cd = new Date();
         Date bef5 = before5Days(cd);
         
-        List<String> tiptics = tipticRepository.getImproveMessageByDateAfter(bef5);
+        List<String> tiptics = tipticRepository.getImproveMessageByDateAfter(bef5)
+                .stream().map(improveMessage -> improveMessage.getMessage()).collect(Collectors.toList());
         int numOfTiptics = tiptics.size(); //20
         int[] randomIdx = new int[7]; //5 랜덤 < numOfTiptics
         List<String> random5 = Arrays.asList(randomIdx).stream()
@@ -40,13 +37,5 @@ public class TipticService {
         cal.add(Calendar.DATE,-5);
         date.setTime(cal.getTimeInMillis());
         return date;
-    }
-
-
-    public ImproveMessage toEntity(MessageDto messageDto, Date date){
-        return ImproveMessage.builder()
-                .message(messageDto.getMessage())
-                .date(date)
-                .build();
     }
 }

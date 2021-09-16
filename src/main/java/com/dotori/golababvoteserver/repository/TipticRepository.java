@@ -7,5 +7,5 @@ import java.util.Date;
 import java.util.List;
 
 public interface TipticRepository extends JpaRepository<ImproveMessage,Long> {
-    List<String> getImproveMessageByDateAfter(Date date);
+    List<ImproveMessage> getImproveMessageByDateAfter(Date date);
 }
