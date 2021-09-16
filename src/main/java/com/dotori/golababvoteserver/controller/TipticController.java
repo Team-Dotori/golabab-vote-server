@@ -6,6 +6,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 @RequiredArgsConstructor
 @RestController
@@ -19,8 +21,8 @@ public class TipticController {
     }
 
     @GetMapping("/get-improve-message")                               //추후 상세 Exception으로 변경
-    public void getImproveMessage(@RequestBody MessageDto messageDto) throws Exception{
-        
+    public List<String> getImproveMessage() throws Exception{
+        return tipticService.GetMessage();
     }
 
 }
