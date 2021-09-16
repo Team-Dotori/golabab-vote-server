@@ -1,5 +1,6 @@
 package com.dotori.golababvoteserver.model.total_vote;
 
+import com.dotori.golababvoteserver.model.total_vote.dto.RankingDto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -30,4 +31,6 @@ public class TotalVote {
         this.numOfValue = numOfValue;
         this.version = version;
     }
+
 }
+

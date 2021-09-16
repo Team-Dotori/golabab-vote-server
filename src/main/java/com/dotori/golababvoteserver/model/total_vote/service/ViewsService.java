@@ -1,6 +1,8 @@
 package com.dotori.golababvoteserver.model.total_vote.service;
 
+import com.dotori.golababvoteserver.model.total_vote.RankingDtoConverter;
 import com.dotori.golababvoteserver.model.total_vote.TotalVote;
+import com.dotori.golababvoteserver.model.total_vote.dto.RankingDto;
 import com.dotori.golababvoteserver.model.total_vote.repository.TotalVoteRepository;
 import com.dotori.golababvoteserver.dto.ViewsDto;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -9,7 +11,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 
@@ -26,11 +27,12 @@ public class ViewsService {
         이 엔티티에 Repository에서 version 값을 가진 컬럼들의 1위가 제일 높은 투표수를 가진 순으로 20위까지 정렬해서 반환해줌
          */
         List<TotalVote> entities = totalVoteRepository.findTop20ByVersionOrderByNumOfValueDesc("version");
-        Map<String, Integer> map = entities.stream().collect(Collectors.toMap(TotalVote::getMenu, TotalVote::getNumOfValue));
-
+        List<RankingDto> returnValue = entities.stream()
+                .map(RankingDtoConverter::toRankingDto)
+                .collect(Collectors.toList());
         entities.forEach(entity -> {
             try {
-                json.set(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(map)); // Map 형식으로 되어 있는 값을 json 으로 변환하여 반환함
+                json.set(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(returnValue)); // Map 형식으로 되어 있는 값을 json 으로 변환하여 반환함
             } catch (JsonProcessingException e) {
                 e.printStackTrace();
             }
