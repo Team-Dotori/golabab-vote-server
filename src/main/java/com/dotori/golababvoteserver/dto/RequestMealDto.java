@@ -1,4 +1,4 @@
-package com.dotori.golababvoteserver.mealDto;
+package com.dotori.golababvoteserver.dto;
 
 
 import lombok.Getter;

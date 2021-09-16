@@ -1,8 +1,8 @@
-package com.dotori.golababvoteserver.mealService;
+package com.dotori.golababvoteserver.service;
 
 import com.dotori.golababvoteserver.exception.MealNotFoundException;
-import com.dotori.golababvoteserver.mealDto.RequestDto;
-import com.dotori.golababvoteserver.mealDto.RequestMealDto;
+import com.dotori.golababvoteserver.dto.RequestDto;
+import com.dotori.golababvoteserver.dto.RequestMealDto;
 import com.dotori.golababvoteserver.model.DailyVote;
 import com.dotori.golababvoteserver.model.Meal;
 import com.dotori.golababvoteserver.model.TotalVote;
@@ -88,7 +88,8 @@ public class MealService {
         }
         return TotalVote.builder()
                 .menu(menu)
-                .NumOfValue(numOfVote)
+                .numOfValue(numOfVote)
+                .version("version")
                 .build();
         // throw new NotFoundMenuName
         }
