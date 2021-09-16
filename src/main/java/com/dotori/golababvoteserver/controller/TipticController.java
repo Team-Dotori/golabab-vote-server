@@ -4,10 +4,7 @@ import com.dotori.golababvoteserver.service.TipticService;
 import com.dotori.golababvoteserver.dto.MessageDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequiredArgsConstructor
@@ -20,4 +17,10 @@ public class TipticController {
     public void improveMessageSave(@RequestBody MessageDto messageDto) throws Exception {
         tipticService.MessageSave(messageDto);
     }
+
+    @GetMapping("/get-improve-message")                               //추후 상세 Exception으로 변경
+    public void getImproveMessage(@RequestBody MessageDto messageDto) throws Exception{
+        
+    }
+
 }
