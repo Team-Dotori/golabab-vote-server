@@ -12,7 +12,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class TotalVote {
     @Id @GeneratedValue
-    Long Idx;
+    Long idx;
 
     @Column
     String menu;
@@ -25,7 +25,7 @@ public class TotalVote {
 
     @Builder
     public TotalVote(Long idx, String menu, int numOfValue, String version) {
-        Idx = idx;
+        this.idx = idx;
         this.menu = menu;
         this.numOfValue = numOfValue;
         this.version = version;
