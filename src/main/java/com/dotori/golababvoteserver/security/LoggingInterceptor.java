@@ -28,7 +28,6 @@ public class LoggingInterceptor implements HandlerInterceptor {
                 log.info("Request Body : {}", objectMapper.readTree(cachingRequest.getContentAsByteArray()));
             }
         }
-
         if (cachingResponse.getContentType() != null && cachingResponse.getContentType().contains("application/json")){
             if (cachingResponse.getContentAsByteArray() != null && cachingResponse.getContentAsByteArray().length != 0){
                 log.info("Response Body : {}", objectMapper.readTree(cachingResponse.getContentAsByteArray()));
