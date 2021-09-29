@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;
 
 @Getter
 @RequiredArgsConstructor
-public class RequestDto {
+public class RequestCollectedVoteDto {
     private final RequestMealDto breakfast;
     private final RequestMealDto lunch;
     private final RequestMealDto dinner;

@@ -1,6 +1,6 @@
 package com.dotori.golababvoteserver.domain.vote.enum_type;
 
-public enum Meal{
+public enum MealType {
     BREAKFAST,
     LUNCH,
     DINNER

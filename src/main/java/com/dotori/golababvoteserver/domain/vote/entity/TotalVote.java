@@ -13,13 +13,10 @@ import javax.persistence.*;
 public class TotalVote {
     @Id @GeneratedValue
     Long idx;
-
     @Column
     String menu;
-
     @Column
     int numOfValue;
-
     @Column
     String version;
 
