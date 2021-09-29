@@ -38,6 +38,7 @@ dependencies {
 	testImplementation 'com.thedeanda:lorem:2.1'
 	// https://mvnrepository.com/artifact/org.mockito/mockito-inline
 	testImplementation 'org.mockito:mockito-inline:3.12.4'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-aop', version: '2.5.4'
 }
 
 test {

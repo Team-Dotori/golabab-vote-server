@@ -24,5 +24,4 @@ public class ViewsController {
         ViewsDto viewsDto = new ViewsDto(start, end, range);
         return new ResponseRankingDto(viewsService.returnViews(viewsDto));
     }
-
 }
