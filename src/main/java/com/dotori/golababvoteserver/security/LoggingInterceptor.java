@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 @Log4j2
 @RequiredArgsConstructor
 @Component
-public class LoggingIntercepter implements HandlerInterceptor {
+public class LoggingInterceptor implements HandlerInterceptor {
     private final ObjectMapper objectMapper;
 
     @Override
