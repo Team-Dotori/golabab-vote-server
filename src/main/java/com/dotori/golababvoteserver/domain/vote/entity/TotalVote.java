@@ -24,12 +24,11 @@ public class TotalVote {
     String version;
 
     @Builder
-    public TotalVote(Long idx, String menu, int numOfValue, String version) {
+    public TotalVote(Long idx, String menu, int numOfValue) {
         this.idx = idx;
         this.menu = menu;
         this.numOfValue = numOfValue;
-        this.version = version;
+        this.version = "version";
     }
-
 }
 
