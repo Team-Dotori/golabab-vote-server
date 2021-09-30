@@ -8,5 +8,5 @@ import java.util.List;
 public interface TotalVoteRepository extends JpaRepository<TotalVote, Long> {
     boolean existsByMenu(String Menu);
     TotalVote getByMenu(String Menu);
-    List<TotalVote> findTop20ByVersionOrderByNumOfValueDesc(String Version);
+    List<TotalVote> findAllByOrderByNumOfVoteDesc();
 }

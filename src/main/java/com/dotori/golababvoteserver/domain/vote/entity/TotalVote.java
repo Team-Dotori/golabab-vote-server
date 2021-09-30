@@ -16,15 +16,15 @@ public class TotalVote {
     @Column
     String menu;
     @Column
-    int numOfValue;
+    int numOfVote;
     @Column
     String version;
 
     @Builder
-    public TotalVote(Long idx, String menu, int numOfValue) {
+    public TotalVote(Long idx, String menu, int numOfVote) {
         this.idx = idx;
         this.menu = menu;
-        this.numOfValue = numOfValue;
+        this.numOfVote = numOfVote;
         this.version = "version";
     }
 }

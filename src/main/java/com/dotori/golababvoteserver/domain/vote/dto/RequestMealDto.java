@@ -1,13 +1,15 @@
 package com.dotori.golababvoteserver.domain.vote.dto;
 
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import java.util.HashMap;
+import java.util.Map;
 
 @Getter
-@RequiredArgsConstructor
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class RequestMealDto {
-    private final HashMap<String, Integer> menus;
+    private Map<String, Integer> menus;
 }

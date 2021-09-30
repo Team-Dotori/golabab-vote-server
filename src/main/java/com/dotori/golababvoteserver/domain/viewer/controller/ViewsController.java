@@ -1,9 +1,8 @@
 package com.dotori.golababvoteserver.domain.viewer.controller;
 
-
 import com.dotori.golababvoteserver.domain.viewer.dto.ResponseRankingDto;
 import com.dotori.golababvoteserver.domain.viewer.service.ViewsService;
-import com.dotori.golababvoteserver.domain.viewer.dto.ViewsDto;
+import com.dotori.golababvoteserver.domain.viewer.dto.MenuRankingRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +15,7 @@ public class ViewsController {
     @ResponseBody
     @GetMapping("/menu-ranking")
     public ResponseRankingDto Ranking(@RequestParam int start, int end, String range ){
-        ViewsDto viewsDto = new ViewsDto(start, end, range);
-        return new ResponseRankingDto(viewsService.returnViews(viewsDto));
+        MenuRankingRequestDto menuRankingRequestDto = new MenuRankingRequestDto(start, end, range);
+        return new ResponseRankingDto(viewsService.getRankingByViews(menuRankingRequestDto));
     }
 }

@@ -5,6 +5,6 @@ import com.dotori.golababvoteserver.domain.vote.entity.TotalVote;
 
 public class RankingDtoConverter {
     public static RankingDto toRankingDto(TotalVote totalVote) {
-        return new RankingDto(totalVote.getMenu(), totalVote.getNumOfValue());
+        return new RankingDto(totalVote.getMenu(), totalVote.getNumOfVote());
     }
 }

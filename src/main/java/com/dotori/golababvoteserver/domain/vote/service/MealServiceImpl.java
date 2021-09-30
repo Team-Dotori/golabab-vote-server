@@ -35,6 +35,7 @@ public class MealServiceImpl implements MealService{
 
     @Transactional
     public void collectAll(@NotNull RequestCollectedVoteDto requestCollectedVoteDto) {
+        System.out.println(requestCollectedVoteDto);
         Date now = now();//시스템 성능으로인한 date 의 차이를 방지한다
 
         collect(requestCollectedVoteDto.getBreakfast(), MealType.BREAKFAST, now);
@@ -76,13 +77,13 @@ public class MealServiceImpl implements MealService{
     private TotalVote toEntity(String menu, int numOfVote){
         if(totalVoteRepository.existsByMenu(menu)){
             TotalVote entity = totalVoteRepository.getByMenu(menu);
-            numOfVote += entity.getNumOfValue();
-            entity.setNumOfValue(numOfVote);
+            numOfVote += entity.getNumOfVote();
+            entity.setNumOfVote(numOfVote);
             return entity;
         }
         return TotalVote.builder()
                 .menu(menu)
-                .numOfValue(numOfVote)
+                .numOfVote(numOfVote)
                 .build();
     }
 
