@@ -35,7 +35,6 @@ public class MealServiceImpl implements MealService{
 
     @Transactional
     public void collectAll(@NotNull RequestCollectedVoteDto requestCollectedVoteDto) {
-        System.out.println(requestCollectedVoteDto);
         Date now = now();//시스템 성능으로인한 date 의 차이를 방지한다
 
         collect(requestCollectedVoteDto.getBreakfast(), MealType.BREAKFAST, now);
