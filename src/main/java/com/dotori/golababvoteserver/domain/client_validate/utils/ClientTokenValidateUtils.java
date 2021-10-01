@@ -4,9 +4,7 @@ import com.dotori.golababvoteserver.domain.client_validate.property.ClientProper
 import com.dotori.golababvoteserver.global.utils.JwtUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import org.yaml.snakeyaml.external.biz.base64Coder.Base64Coder;
 
-import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
