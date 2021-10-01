@@ -30,7 +30,7 @@ public class MealServiceImpl implements MealService{
         return new Date();
     }
     private boolean isFriday() {
-        return getDateDay() != 6;
+        return getDateDay() == 6;
     }
 
     @Transactional
