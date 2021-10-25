@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  height: 98vh;
+}
+
+form {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: zoomInUp 1s;
+          animation: zoomInUp 1s;
+}
+
+.logo {
+  margin-top: 10vh;
+  position: relative;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20vh;
+}
+
+.select {
+  background-color: aquamarine;
+  color: black;
+  width: 160px;
+  padding: 30px;
+  border-radius: 45px;
+  -webkit-box-shadow: 0px 10px 15px #baffee;
+          box-shadow: 0px 10px 15px #baffee;
+  font-family: 'WemakepriceOTF';
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.select:hover {
+  -webkit-animation: rubberBand 1s infinite;
+          animation: rubberBand 1s infinite;
+  cursor: pointer;
+}
+
+.select:visited {
+  color: black;
+}
+
+.select:link {
+  color: black;
+}
+/*# sourceMappingURL=style.css.map */

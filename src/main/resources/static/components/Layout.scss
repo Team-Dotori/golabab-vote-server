@@ -1,0 +1,15 @@
+.page {
+  top: 0;
+  transition: opacity 0.3s;
+  .entering,
+  .entered {
+  position: relative;
+  opacity: 1;
+}
+.exiting,
+.exited {
+  position: absolute;
+  opacity: 0;
+}
+}
+

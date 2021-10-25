@@ -1,0 +1,215 @@
+.cards {
+  display: block;
+  background-color: white;
+  width: 235px;
+  height: 290px;
+  -webkit-box-shadow: 4px 4px 15px rgba(136, 136, 136, 0.25);
+          box-shadow: 4px 4px 15px rgba(136, 136, 136, 0.25);
+  border-radius: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 7px;
+}
+
+.cards .name {
+  position: relative;
+  display: inline-block;
+  line-height: 165px;
+  width: 100%;
+  height: 165px;
+}
+
+.cards .name p {
+  display: inline-block;
+}
+
+.cards .num {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 125px;
+  line-height: 125px;
+  background-color: #F3D586;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.cards .num p {
+  display: inline-block;
+  position: relative;
+  right: -13%;
+  font-size: 25px;
+}
+
+.cards .num .img {
+  position: relative;
+  width: 56px;
+  height: 72px;
+  bottom: -57%;
+  right: -23%;
+}
+
+.cardss {
+  display: block;
+  background-color: white;
+  width: 235px;
+  height: 310px;
+  margin-left: 25px;
+  margin-right: 25px;
+  -webkit-box-shadow: 4px 4px 15px rgba(136, 136, 136, 0.25);
+          box-shadow: 4px 4px 15px rgba(136, 136, 136, 0.25);
+  border-radius: 10px;
+}
+
+.cardss .name {
+  position: relative;
+  display: inline-block;
+  line-height: 175px;
+  width: 100%;
+  height: 175px;
+}
+
+.cardss .name p {
+  display: inline-block;
+}
+
+.cardss .num {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 135px;
+  line-height: 135px;
+  background-color: #F3D586;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.cardss .num p {
+  display: inline-block;
+  position: relative;
+  right: -13%;
+  font-size: 25px;
+}
+
+.cardss .num .img {
+  position: relative;
+  width: 56px;
+  height: 72px;
+  bottom: -57%;
+  right: -23%;
+}
+
+.fcard {
+  display: block;
+  background-color: white;
+  width: 245px;
+  height: 330px;
+  margin-left: 25px;
+  margin-right: 25px;
+  -webkit-box-shadow: 4px 4px 15px rgba(136, 136, 136, 0.25);
+          box-shadow: 4px 4px 15px rgba(136, 136, 136, 0.25);
+  border-radius: 10px;
+}
+
+.fcard .name {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 185px;
+}
+
+.fcard .name p {
+  display: inline-block;
+  position: relative;
+  top: -10%;
+}
+
+.fcard .name .img {
+  position: relative;
+  right: 96%;
+  top: -30%;
+}
+
+.fcard .num {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 145px;
+  line-height: 145px;
+  background-color: #F3D586;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.fcard .num p {
+  display: inline-block;
+  position: relative;
+  right: -13%;
+  font-size: 25px;
+}
+
+.fcard .num .img {
+  position: relative;
+  width: 56px;
+  height: 72px;
+  bottom: -57%;
+  right: -23%;
+}
+
+.flexable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flexable p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#four {
+  left: 17.7vw;
+  top: 44vh;
+}
+
+#fours {
+  left: 17.7vw;
+  top: 57.5vh;
+}
+
+#two {
+  left: 29.9vw;
+  top: 44vh;
+}
+
+#twos {
+  left: 33.1vw;
+  top: 57.5vh;
+}
+
+#one {
+  top: 44vh;
+}
+
+#ones {
+  left: 48vw;
+  top: 57.5vh;
+}
+
+#three {
+  left: 61.9vw;
+  top: 44vh;
+}
+
+#threes {
+  left: 63.4vw;
+  top: 57.5vh;
+}
+
+#five {
+  left: 75.2vw;
+  top: 44vh;
+}
+
+#fives {
+  left: 78.2vw;
+  top: 57.5vh;
+}
+/*# sourceMappingURL=Card.css.map */
